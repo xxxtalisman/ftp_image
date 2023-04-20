@@ -1,0 +1,35 @@
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+#local files
+.bundle
+.myumldata
+.classpath
+.myeclipse/
+.mymetadata
+.project
+.classpath
+.git/
+.bin/
+.settings/
+.idea/
+out/
+target/
+.externalToolBuilders/
+.tern-project
+vcs.xml
+misc.xml
+*.iml
+
+# Mac 
+.DS_Store
+
+/target/
+/.gradle/

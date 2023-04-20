@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.emdata.ivvs.dao.SourceDataMapper" >
+  <resultMap id="BaseResultMap" type="com.emdata.ivvs.vo.InsertSourceVo" >
+    <id column="uuid" property="uuid" jdbcType="BIGINT" />
+    <result column="sbbh" property="sbbh" jdbcType="VARCHAR" />
+    <result column="zqmj" property="zqmj" jdbcType="VARCHAR" />
+    <result column="clfl" property="clfl" jdbcType="VARCHAR" />
+    <result column="hpzl" property="hpzl" jdbcType="VARCHAR" />
+    <result column="hphm" property="hphm" jdbcType="VARCHAR" />
+    <result column="xzqh" property="xzqh" jdbcType="VARCHAR" />
+    <result column="wfdd" property="wfdd" jdbcType="VARCHAR" />
+    <result column="lddm" property="lddm" jdbcType="VARCHAR" />
+    <result column="ddms" property="ddms" jdbcType="VARCHAR" />
+    <result column="wfdz" property="wfdz" jdbcType="VARCHAR" />
+    <result column="wfsj" property="wfsj" jdbcType="TIMESTAMP" />
+    <result column="wfsj1" property="wfsj1" jdbcType="TIMESTAMP" />
+    <result column="wfxw" property="wfxw" jdbcType="VARCHAR" />
+    <result column="scz" property="scz" jdbcType="VARCHAR" />
+    <result column="bzz" property="bzz" jdbcType="VARCHAR" />
+    <result column="zpsl" property="zpsl" jdbcType="INTEGER" />
+    <result column="zpwjm" property="zpwjm" jdbcType="VARCHAR" />
+    <result column="zpstr1" property="zpstr1" jdbcType="VARCHAR" />
+    <result column="zpstr2" property="zpstr2" jdbcType="VARCHAR" />
+    <result column="zpstr3" property="zpstr3" jdbcType="VARCHAR" />
+    <result column="wfspdz" property="wfspdz" jdbcType="VARCHAR" />
+    <result column="ilocalremote" property="ilocalremote" jdbcType="INTEGER" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="createtime" property="createtime" jdbcType="TIMESTAMP" />
+    <result column="fxdm" property="fxdm" jdbcType="VARCHAR" />
+    <result column="gxbm" property="fxdm" jdbcType="VARCHAR" />
+    <result column="yhdm" property="yhdm" jdbcType="VARCHAR" />
+    <result column="sjly" property="sjly" jdbcType="VARCHAR" />
+    <result column="cdh" property="cdh" jdbcType="VARCHAR" />
+    <result column="cjh" property="cjh" jdbcType="VARCHAR" />
+    <result column="qjcssj" property="qjcssj" jdbcType="TIMESTAMP" />
+    <result column="datasource" property="datasource" jdbcType="VARCHAR" />
+    <result column="wfxwmc" property="wfxwmc" jdbcType="VARCHAR" />
+    <result column="sfjtp" property="sfjtp" jdbcType="VARCHAR" />
+    <result column="clpp" property="clpp" jdbcType="VARCHAR" />
+    <result column="csys" property="csys" jdbcType="VARCHAR" />
+    <result column="sfhhdj" property="sfhhdj" jdbcType="VARCHAR" />
+    <result column="Xh" property="Xh" jdbcType="VARCHAR" />
+    <result column="cdbh" property="cdbh" jdbcType="VARCHAR" />
+    <result column="hpys" property="hpys" jdbcType="VARCHAR" />
+    <result column="xsfx" property="xsfx" jdbcType="VARCHAR" />
+    <result column="cllx" property="cllx" jdbcType="VARCHAR" />
+    <result column="fzjg" property="fzjg" jdbcType="VARCHAR" />
+    <result column="jdcsyr" property="jdcsyr" jdbcType="VARCHAR" />
+    <result column="jtfs" property="jtfs" jdbcType="VARCHAR" />
+    <result column="zsxzqh" property="zsxzqh" jdbcType="VARCHAR" />
+    <result column="dh" property="dh" jdbcType="VARCHAR" />
+    <result column="lxfs" property="lxfs" jdbcType="VARCHAR" />
+    <result column="xcfw" property="xcfw" jdbcType="VARCHAR" />
+    <result column="jdzt" property="jdzt" jdbcType="VARCHAR" />
+    <result column="jdjg" property="jdjg" jdbcType="VARCHAR" />
+    <result column="alg_status" property="algStatus" jdbcType="VARCHAR" />
+    <result column="alg_uuid" property="algUuid" jdbcType="VARCHAR" />
+    <result column="sxjbh" property="sxjbh" jdbcType="VARCHAR" />
+    <result column="gp01" property="gp01" jdbcType="VARCHAR" />
+    <result column="alg_err_code" property="algErrCode" jdbcType="VARCHAR" />
+    <result column="view_id" property="viewId" jdbcType="VARCHAR" />
+    <result column="alg_times" property="algTimes" jdbcType="VARCHAR" />
+    <result column="send_third_party" property="sendThirdParty" jdbcType="VARCHAR" />
+    <result column="send_times" property="sendTimes" jdbcType="VARCHAR" />
+    <result column="tr_id" property="trId" jdbcType="VARCHAR" />
+    <result column="priority" property="priority" jdbcType="VARCHAR" />
+  </resultMap>
+
+  <sql id="Base_Column_List" >
+    uuid, sbbh, zqmj, clfl, hpzl, hphm, xzqh, wfdd, lddm, ddms, wfdz, wfsj, wfsj1, wfxw, 
+    scz, bzz, zpsl, zpwjm, zpstr1, zpstr2, zpstr3, wfspdz, ilocalremote, createtime
+  </sql>
+
+  <insert id="insertSelective" parameterType="com.emdata.ivvs.vo.InsertSourceVo">
+    INSERT INTO ser_inputdata
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="uuid != null" >
+        uuid,
+      </if>
+      <if test="sbbh != null" >
+        sbbh,
+      </if>
+      <if test="zqmj != null" >
+        zqmj,
+      </if>
+      <if test="clfl != null" >
+        clfl,
+      </if>
+      <if test="hpzl != null" >
+        hpzl,
+      </if>
+      <if test="hphm != null" >
+        hphm,
+      </if>
+      <if test="xzqh != null" >
+        xzqh,
+      </if>
+      <if test="wfdd != null" >
+        wfdd,
+      </if>
+      <if test="lddm != null" >
+        lddm,
+      </if>
+      <if test="ddms != null" >
+        ddms,
+      </if>
+      <if test="wfdz != null" >
+        wfdz,
+      </if>
+      <if test="wfsj != null" >
+        wfsj,
+      </if>
+      <if test="wfsj1 != null" >
+        wfsj1,
+      </if>
+      <if test="wfxw != null" >
+        wfxw,
+      </if>
+      <if test="scz != null" >
+        scz,
+      </if>
+      <if test="bzz != null" >
+        bzz,
+      </if>
+      <if test="zpsl != null" >
+        zpsl,
+      </if>
+      <if test="zpwjm != null" >
+        zpwjm,
+      </if>
+      <if test="zpstr1 != null" >
+        zpstr1,
+      </if>
+      <if test="zpstr2 != null" >
+        zpstr2,
+      </if>
+      <if test="zpstr3 != null" >
+        zpstr3,
+      </if>
+      <if test="wfspdz != null" >
+        wfspdz,
+      </if>
+      <if test="ilocalremote != null" >
+        ilocalremote,
+      </if>
+      <if test="createtime != null" >
+        createtime,
+      </if>
+      <if test="fxdm != null" >
+        fxdm,
+      </if>
+      <if test="gxbm != null" >
+        gxbm,
+      </if>
+      <if test="yhdm != null" >
+        yhdm,
+      </if>
+      <if test="sjly != null" >
+        sjly,
+      </if>
+      <if test="cdh != null" >
+        cdh,
+      </if>
+      <if test="cjh != null" >
+        cjh,
+      </if>
+      <if test="qjcssj != null" >
+        qjcssj,
+      </if>
+      <if test="datasource != null" >
+        datasource,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="wfxwmc != null" >
+        wfxwmc,
+      </if>
+      <if test="sfjtp != null" >
+        sfjtp,
+      </if>
+      <if test="clpp != null" >
+        clpp,
+      </if>
+      <if test="csys != null" >
+        csys,
+      </if>
+      <if test="sfhhdj != null" >
+        sfhhdj,
+      </if>
+      <if test="Xh != null" >
+        Xh,
+      </if>
+      <if test="cdbh != null" >
+        cdbh,
+      </if>
+      <if test="hpys != null" >
+        hpys,
+      </if>
+      <if test="xsfx != null" >
+        xsfx,
+      </if>
+      <if test="cllx != null" >
+        cllx,
+      </if>
+      <if test="fzjg != null" >
+        fzjg,
+      </if>
+      <if test="jdcsyr != null" >
+        jdcsyr,
+      </if>
+      <if test="jtfs != null" >
+        jtfs,
+      </if>
+      <if test="zsxzqh != null" >
+        zsxzqh,
+      </if>
+      <if test="dh != null" >
+        dh,
+      </if>
+      <if test="lxfs != null" >
+        lxfs,
+      </if>
+      <if test="xcfw != null" >
+        xcfw,
+      </if>
+      <if test="jdzt != null" >
+        jdzt,
+      </if>
+      <if test="algStatus != null" >
+        alg_status,
+      </if>
+      <if test="algUuid != null" >
+        alg_uuid,
+      </if>
+      <if test="sxjbh != null" >
+        sxjbh,
+      </if>
+      <if test="gp01 != null" >
+        gp01,
+      </if>
+      <if test="algErrCode != null" >
+        alg_err_code,
+      </if>
+      <if test="viewId != null" >
+        view_id,
+      </if>
+      <if test="algTimes != null" >
+        alg_times,
+      </if>
+      <if test="sendThirdParty != null" >
+        send_third_party,
+      </if>
+      <if test="sendTimes != null" >
+        send_times,
+      </if>
+      <if test="trId != null" >
+        tr_id,
+      </if>
+      <if test="priority != null" >
+        priority,
+      </if>
+
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="uuid != null" >
+        #{uuid,jdbcType=BIGINT},
+      </if>
+      <if test="sbbh != null" >
+        #{sbbh,jdbcType=VARCHAR},
+      </if>
+      <if test="zqmj != null" >
+        #{zqmj,jdbcType=VARCHAR},
+      </if>
+      <if test="clfl != null" >
+        #{clfl,jdbcType=VARCHAR},
+      </if>
+      <if test="hpzl != null" >
+        #{hpzl,jdbcType=VARCHAR},
+      </if>
+      <if test="hphm != null" >
+        #{hphm,jdbcType=VARCHAR},
+      </if>
+      <if test="xzqh != null" >
+        #{xzqh,jdbcType=VARCHAR},
+      </if>
+      <if test="wfdd != null" >
+        #{wfdd,jdbcType=VARCHAR},
+      </if>
+      <if test="lddm != null" >
+        #{lddm,jdbcType=VARCHAR},
+      </if>
+      <if test="ddms != null" >
+        #{ddms,jdbcType=VARCHAR},
+      </if>
+      <if test="wfdz != null" >
+        #{wfdz,jdbcType=VARCHAR},
+      </if>
+      <if test="wfsj != null" >
+        #{wfsj,jdbcType=TIMESTAMP},
+      </if>
+      <if test="wfsj1 != null" >
+        #{wfsj1,jdbcType=TIMESTAMP},
+      </if>
+      <if test="wfxw != null" >
+        #{wfxw,jdbcType=VARCHAR},
+      </if>
+      <if test="scz != null" >
+        #{scz,jdbcType=VARCHAR},
+      </if>
+      <if test="bzz != null" >
+        #{bzz,jdbcType=VARCHAR},
+      </if>
+      <if test="zpsl != null" >
+        #{zpsl,jdbcType=INTEGER},
+      </if>
+      <if test="zpwjm != null" >
+        #{zpwjm,jdbcType=VARCHAR},
+      </if>
+      <if test="zpstr1 != null" >
+        #{zpstr1,jdbcType=VARCHAR},
+      </if>
+      <if test="zpstr2 != null" >
+        #{zpstr2,jdbcType=VARCHAR},
+      </if>
+      <if test="zpstr3 != null" >
+        #{zpstr3,jdbcType=VARCHAR},
+      </if>
+      <if test="wfspdz != null" >
+        #{wfspdz,jdbcType=VARCHAR},
+      </if>
+      <if test="ilocalremote != null" >
+        #{ilocalremote,jdbcType=INTEGER},
+      </if>
+      <if test="createtime != null" >
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fxdm != null" >
+       #{fxdm,jdbcType=VARCHAR},
+      </if>
+      <if test="gxbm != null" >
+       #{gxbm,jdbcType=VARCHAR},
+      </if>
+      <if test="yhdm != null" >
+       #{yhdm,jdbcType=VARCHAR},
+      </if>
+      <if test="sjly != null" >
+        #{sjly,jdbcType=VARCHAR},
+      </if>
+      <if test="cdh != null" >
+        #{cdh,jdbcType=VARCHAR},
+      </if>
+      <if test="cjh != null" >
+        #{cjh,jdbcType=VARCHAR},
+      </if>
+      <if test="qjcssj != null" >
+        #{qjcssj,jdbcType=VARCHAR},
+      </if>
+      <if test="datasource != null" >
+        #{datasource,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="wfxwmc != null" >
+        #{wfxwmc,jdbcType=VARCHAR},
+      </if>
+      <if test="sfjtp != null" >
+        #{sfjtp,jdbcType=VARCHAR},
+      </if>
+      <if test="clpp != null" >
+        #{clpp,jdbcType=VARCHAR},
+      </if>
+      <if test="csys != null" >
+        #{csys,jdbcType=VARCHAR},
+      </if>
+      <if test="sfhhdj != null" >
+        #{sfhhdj,jdbcType=VARCHAR},
+      </if>
+      <if test="Xh != null" >
+        #{Xh,jdbcType=VARCHAR},
+      </if>
+      <if test="cdbh != null" >
+        #{cdbh,jdbcType=VARCHAR},
+      </if>
+      <if test="hpys != null" >
+        #{hpys,jdbcType=VARCHAR},
+      </if>
+      <if test="xsfx != null" >
+       #{xsfx,jdbcType=VARCHAR},
+      </if>
+      <if test="cllx != null" >
+       #{cllx,jdbcType=VARCHAR},
+      </if>
+      <if test="fzjg != null" >
+       #{fzjg,jdbcType=VARCHAR},
+      </if>
+      <if test="jdcsyr != null" >
+       #{jdcsyr,jdbcType=VARCHAR},
+      </if>
+      <if test="jtfs != null" >
+       #{jtfs,jdbcType=VARCHAR},
+      </if>
+      <if test="zsxzqh != null" >
+       #{zsxzqh,jdbcType=VARCHAR},
+      </if>
+      <if test="dh != null" >
+       #{dh,jdbcType=VARCHAR},
+      </if>
+      <if test="lxfs != null" >
+       #{lxfs,jdbcType=VARCHAR},
+      </if>
+      <if test="xcfw != null" >
+        #{xcfw,jdbcType=VARCHAR},
+      </if>
+      <if test="jdzt != null" >
+        #{jdzt,jdbcType=VARCHAR},
+      </if>
+      <if test="algStatus != null" >
+        #{algStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="algUuid != null" >
+        #{algUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="sxjbh != null" >
+        #{sxjbh,jdbcType=VARCHAR},
+      </if>
+      <if test="gp01 != null" >
+        #{gp01,jdbcType=VARCHAR},
+      </if>
+      <if test="algErrCode != null" >
+        #{algErrCode,jdbcType=VARCHAR},
+      </if>
+      <if test="viewId != null" >
+        #{viewId,jdbcType=VARCHAR},
+      </if>
+      <if test="algTimes != null" >
+        #{algTimes,jdbcType=VARCHAR},
+      </if>
+      <if test="sendThirdParty != null" >
+        #{sendThirdParty,jdbcType=VARCHAR},
+      </if>
+      <if test="sendTimes != null" >
+        #{sendTimes,jdbcType=VARCHAR},
+      </if>
+      <if test="trId != null" >
+       #{trId,jdbcType=VARCHAR},
+      </if>
+      <if test="priority != null" >
+      #{priority,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+
+
+
+  <select id="selectSelective" parameterType="com.emdata.ivvs.vo.InsertSourceVo" resultType="com.emdata.ivvs.vo.InsertSourceVo">
+    SELECT * FROM ser_inputdata WHERE zpwjm LIKE concat(#{zpwjm},'%') LIMIT 1
+  </select>
+
+  <update id="updateSelective" parameterType="com.emdata.ivvs.vo.InsertSourceVo">
+    UPDATE ser_inputdata SET wfspdz=#{wfspdz} WHERE uuid = #{uuid}
+  </update>
+
+</mapper>
